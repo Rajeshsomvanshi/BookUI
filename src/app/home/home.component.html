@@ -1,0 +1,23 @@
+<table class="table">
+
+    <thead>
+      <tr>
+        <th>ISBN</th>
+        <th>Title</th>
+        <th>Publication Date</th>
+        <th>Authors</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of bookList">
+        <td>{{data.isbn}}</td>
+        <td>{{data.title}}</td>
+        <td>{{data.publicationDate}}</td>
+        <td >
+          <p *ngFor = "let d of data.authors">{{d}}</p>
+        </td>
+        <td><a (click)="onEditClick(data.isbn)" style="cursor: pointer; color: blue;">Edit</a> | <a (click)="onDeleteClick(data.isbn)" style="cursor: pointer; color:red;">Delete</a></td>
+      </tr>
+    </tbody>
+
+  </table>

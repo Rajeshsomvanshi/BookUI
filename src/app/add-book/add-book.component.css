@@ -1,0 +1,21 @@
+input{
+    border-color: black;
+  }
+  
+  
+  label{
+    font-weight: bold;
+    font-size : large;
+    font-family: fangsong;
+    color:teal;
+  }
+  
+  input.ng-invalid.ng-touched{
+    border-color: red;
+  }
+  
+  span{
+    color: red;
+    font-weight: bolder;
+    font-size: small;
+  }

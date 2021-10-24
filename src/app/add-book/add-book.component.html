@@ -1,0 +1,25 @@
+<form (ngSubmit)="onSubmit()" #f="ngForm">
+    <div id="user-data">
+        <div class="form-group">
+            <label for="isbn">ISBN</label>
+            <input type="text" 
+            id="isbn" 
+            class="form-control" ngModel name="isbn" required #isbn="ngModel">
+            <span class="help-block" *ngIf="!isbn.valid && isbn.touched">ISBN cant be empty</span>
+        </div>
+        <div class="form-group">
+            <label for="title">Book Title</label>
+            <input type="text" id="title" class="form-control" ngModel name="title" required #title="ngModel">
+            <span class="help-block" *ngIf="!title.valid && title.touched">Title cant be empty</span>
+        </div>
+        <div class="form-group">
+            <label for="pdate">Publication Date</label>
+            <input type="date" id="pdate" class="form-control" ngModel name="pdate" >
+        </div>
+        <div class="form-group">
+            <label for="authors">Authors</label>
+            <input type="text" id="authors" class="form-control" ngModel name="authors" required>
+        </div>
+    </div>
+    <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Submit</button>
+</form>
